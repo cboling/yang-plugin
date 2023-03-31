@@ -1,18 +1,50 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
-    <id>com.github.cboling.yangplugin</id>
-    <name>yang-plugin Template</name>
-    <vendor>cboling</vendor>
-
+    <id>com.bcsw.yang</id>
+    <name>Yang Data Modeling Language</name>
+    <vendor email="chip@bcsw.net" url="">Chip Boling </vendor>
+    <!--
+      The questions should go to the vendor above. The original author(s) are below:
+      <vendor email="dave@dtucker.co.uk" url="http://dtucker.co.uk">Dave Tucker</vendor>
+      <vendor email="dmytro.lytovchenko@gmail.com" url="">Dmytro Lytovchenko
+      -->
+    <depends>com.intellij.modules.lang</depends>
     <depends>com.intellij.modules.platform</depends>
+
+    <description><![CDATA[
+    This IntelliJ Plugin adds support for Yang Data Modeling Language version 2.0 for the definition of data sent
+    over the network by NETCONF, RESTCONF management protocols and such. Yang is described in RFC-6020
+    (version 1.0, 2010) and RFC-7950 (version 1.1, 2016). See https://en.wikipedia.org/wiki/YANG
+
+    The plugin adds syntax highlighting for Yang 1.0 and simple code completion.
+    ]]></description>
 
     <resource-bundle>messages.MyBundle</resource-bundle>
 
     <extensions defaultExtensionNs="com.intellij">
-        <toolWindow factoryClass="com.github.cboling.yangplugin.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
+<!--        <toolWindow factoryClass="com.bcsw.yangplugin.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>-->
+        <fileType name="Yang Data Model"
+                  implementationClass="com.bcsw.yang.YangFileType"
+                  fieldName="INSTANCE"
+                  language="Yang"
+                  extensions="yang"/>
+        <lang.parserDefinition
+                language="Yang"
+                implementationClass="com.bcsw.yang.YangParserDefinition"/>
+        <lang.syntaxHighlighterFactory
+                language="Yang"
+                implementationClass="com.bcsw.yang.editor.YangSyntaxHighlighterFactory"/>
+        <colorSettingsPage
+                implementation="com.bcsw.yang.editor.YangColorSettingsPage"/>
+        <completion.contributor
+                language="Yang"
+                implementationClass="com.bcsw.yang.YangCompletionContributor"/>
+        <lang.foldingBuilder
+                language="Yang"
+                implementationClass="com.bcsw.yang.YangFoldingBuilder"/>
     </extensions>
 
-    <applicationListeners>
-        <listener class="com.github.cboling.yangplugin.listeners.MyFrameStateListener" topic="com.intellij.ide.FrameStateListener"/>
-    </applicationListeners>
+<!--    <applicationListeners>-->
+<!--        <listener class="com.bcsw.yangplugin.listeners.MyFrameStateListener" topic="com.intellij.ide.FrameStateListener"/>-->
+<!--    </applicationListeners>-->
 </idea-plugin>

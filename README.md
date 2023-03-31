@@ -1,44 +1,68 @@
-# yang-plugin
+# IntelliJ/PyCharm/... YANG Modeling Plugin
 
-![Build](https://github.com/cboling/yang-plugin/workflows/Build/badge.svg)
-[![Version](https://img.shields.io/jetbrains/plugin/v/PLUGIN_ID.svg)](https://plugins.jetbrains.com/plugin/PLUGIN_ID)
-[![Downloads](https://img.shields.io/jetbrains/plugin/d/PLUGIN_ID.svg)](https://plugins.jetbrains.com/plugin/PLUGIN_ID)
+This is a fork of the [IntelliJ YANG plugin](https://github.com/kvakvs/intellij-yang) project
+that is updated for the latest Jetbrains IDEs (latest as of March 2023).  Goal is to be able to use them
+with the newer IDEs and remove restrictions on versions.
 
-## Template ToDo list
-- [x] Create a new [IntelliJ Platform Plugin Template][template] project.
-- [ ] Get familiar with the [template documentation][template].
-- [ ] Adjust the [pluginGroup](./gradle.properties), [plugin ID](./src/main/resources/META-INF/plugin.xml) and [sources package](./src/main/kotlin).
-- [ ] Adjust the plugin description in `README` (see [Tips][docs:plugin-description])
-- [ ] Review the [Legal Agreements](https://plugins.jetbrains.com/docs/marketplace/legal-agreements.html?from=IJPluginTemplate).
-- [ ] [Publish a plugin manually](https://plugins.jetbrains.com/docs/intellij/publishing-plugin.html?from=IJPluginTemplate) for the first time.
-- [ ] Set the `PLUGIN_ID` in the above README badges.
-- [ ] Set the [Plugin Signing](https://plugins.jetbrains.com/docs/intellij/plugin-signing.html?from=IJPluginTemplate) related [secrets](https://github.com/JetBrains/intellij-platform-plugin-template#environment-variables).
-- [ ] Set the [Deployment Token](https://plugins.jetbrains.com/docs/marketplace/plugin-upload.html?from=IJPluginTemplate).
-- [ ] Click the <kbd>Watch</kbd> button on the top of the [IntelliJ Platform Plugin Template][template] to be notified about releases containing new features and fixes.
+**NOTE**: Versions prior to the 2023 is not guaranteed to work...
+
+
+The first few builds/releases may contain additional IntelliJ template artifacts that are not
+needed and it may be a while before I clean them up once I get this project working on my
+PyCharm IDE  (Version 2023.1 Professional Edition - Build #PY-231.8109.197, built on March 29, 2023)
 
 <!-- Plugin description -->
-This Fancy IntelliJ Platform Plugin is going to be your implementation of the brilliant ideas that you have.
+This IntelliJ Plugin adds support for Yang Data Modeling Language version 2.0 for the definition of data sent
+over the network by NETCONF, RESTCONF management protocols and such. Yang is described in RFC-6020
+(version 1.0, 2010) and RFC-7950 (version 1.1, 2016). See https://en.wikipedia.org/wiki/YANG
 
-This specific section is a source for the [plugin.xml](/src/main/resources/META-INF/plugin.xml) file which will be extracted by the [Gradle](/build.gradle.kts) during the build process.
-
-To keep everything working, do not remove `<!-- ... -->` sections. 
+The plugin adds syntax highlighting for Yang 1.0 and simple code completion.
 <!-- Plugin description end -->
 
-## Installation
+--------------------------------------------------------------------------------------------------------------
+ORIGINAL README.md is below (from the fork)
 
-- Using IDE built-in plugin system:
-  
-  <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>Marketplace</kbd> > <kbd>Search for "yang-plugin"</kbd> >
-  <kbd>Install Plugin</kbd>
-  
-- Manually:
+intellij-yang
+=============
 
-  Download the [latest release](https://github.com/cboling/yang-plugin/releases/latest) and install it manually using
-  <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>⚙️</kbd> > <kbd>Install plugin from disk...</kbd>
+This IntelliJ Plugin adds support for Yang Data Modeling Language for the definition of data sent over the network by NETCONF,
+RESTCONF management protocols and such. Yang is described in RFC-6020 (version 1.0, 2010) and RFC-7950 (version 1.1, 2016).
+See https://en.wikipedia.org/wiki/YANG
 
+# Features
 
----
-Plugin based on the [IntelliJ Platform Plugin Template][template].
+- Syntax Highlighting
+- Rudimentary Code Completion
 
-[template]: https://github.com/JetBrains/intellij-platform-plugin-template
-[docs:plugin-description]: https://plugins.jetbrains.com/docs/intellij/plugin-user-experience.html#plugin-description-and-presentation
+# To Do
+
+- More comprehensive parsing and code completion
+- References
+- Find Usages
+- Add tests
+
+# Hacking
+
+- Fork this repository
+- Make changes
+- Send a pull request
+
+# Development Environment
+
+Follow the tutorial [here](http://confluence.jetbrains.com/display/IntelliJIDEA/Prerequisites) to get set up
+
+# License
+
+    Copyright 2014 Red Hat Inc.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
