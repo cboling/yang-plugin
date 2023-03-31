@@ -20,7 +20,7 @@ class YangFoldingBuilder : FoldingBuilderEx(), DumbAware {
             root,
             YangContainerStmt::class.java, YangLeafStmt::class.java, YangTypedefStmt::class.java,
             YangRevisionStmt::class.java, YangListStmt::class.java, YangRpcStmt::class.java,
-            YangNotificationStmt::class.java
+            YangNotificationStmt::class.java, YangGroupingStmt::class.java
         )
         for (foldNode in containerNodes) {
             descriptors.add(FoldingDescriptor(foldNode.node, foldNode.textRange, null))
@@ -56,6 +56,7 @@ class YangFoldingBuilder : FoldingBuilderEx(), DumbAware {
             is YangListStmt -> "list"
             is YangRpcStmt -> "rpc"
             is YangNotificationStmt -> "notification"
+            is YangGroupingStmt -> "grouping"
             else -> "..."
         }
         return if (foldStrNodes.isNotEmpty()) {
