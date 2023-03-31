@@ -19,6 +19,24 @@ over the network by NETCONF, RESTCONF management protocols and such. Yang is des
 The plugin adds syntax highlighting for Yang 1.0 and simple code completion.
 <!-- Plugin description end -->
 
+# To Do
+Some ideas for improvement.  Not all are easy or possible to realize.
+
+- Settings to allow for color assignments
+- Highlight deprecated items
+- Formatting rules and reformat code capabilities
+  - Indention
+  - Spaces before {", "{" on same line or next
+  - Spaces before }", "}" on same line or next
+  - Maximum line lengths (Descriptions particualrly)
+  - import optimization (alphabetical)
+  - revision optization (newest first)
+- Reference links
+  - Indexing phase if needed. Figure out how to parse or look up some well known models
+  - Click on import (or import lookup)
+  - Typedefs  (goto definition and perhaps tooltip?)
+  - Uses, augment, ... (goto the reference on click)
+
 --------------------------------------------------------------------------------------------------------------
 ORIGINAL README.md is below (from the fork)
 
