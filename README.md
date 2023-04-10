@@ -1,11 +1,10 @@
 # IntelliJ/PyCharm/... YANG Modeling Plugin
 
-This is a fork of the [IntelliJ YANG plugin](https://github.com/kvakvs/intellij-yang) project
+This is a manual fork of the [IntelliJ YANG plugin](https://github.com/kvakvs/intellij-yang) project
 that is updated for the latest Jetbrains IDEs (latest as of March 2023).  Goal is to be able to use them
 with the newer IDEs and remove restrictions on versions.
 
 **NOTE**: Versions prior to the 2023 is not guaranteed to work...
-
 
 The first few builds/releases may contain additional IntelliJ template artifacts that are not
 needed and it may be a while before I clean them up once I get this project working on my
@@ -19,6 +18,11 @@ over the network by NETCONF, RESTCONF management protocols and such. Yang is des
 The plugin adds syntax highlighting for Yang 1.0 and simple code completion.
 <!-- Plugin description end -->
 
+# Features
+
+- Syntax Highlighting
+- Rudimentary Code Completion
+
 # To Do
 Some ideas for improvement.  Not all are easy or possible to realize.
 
@@ -28,9 +32,9 @@ Some ideas for improvement.  Not all are easy or possible to realize.
   - Indention
   - Spaces before {", "{" on same line or next
   - Spaces before }", "}" on same line or next
-  - Maximum line lengths (Descriptions particualrly)
+  - Maximum line lengths (Descriptions particularly)
   - import optimization (alphabetical)
-  - revision optization (newest first)
+  - revision optimization (newest first)
 - Reference links
   - Indexing phase if needed. Figure out how to parse or look up some well known models
   - Click on import (or import lookup)
@@ -38,49 +42,5 @@ Some ideas for improvement.  Not all are easy or possible to realize.
   - Uses, augment, ... (goto the reference on click)
 
 --------------------------------------------------------------------------------------------------------------
-ORIGINAL README.md is below (from the fork)
-
-intellij-yang
-=============
-
-This IntelliJ Plugin adds support for Yang Data Modeling Language for the definition of data sent over the network by NETCONF,
-RESTCONF management protocols and such. Yang is described in RFC-6020 (version 1.0, 2010) and RFC-7950 (version 1.1, 2016).
-See https://en.wikipedia.org/wiki/YANG
-
-# Features
-
-- Syntax Highlighting
-- Rudimentary Code Completion
-
-# To Do
-
-- More comprehensive parsing and code completion
-- References
-- Find Usages
-- Add tests
-
-# Hacking
-
-- Fork this repository
-- Make changes
-- Send a pull request
-
-# Development Environment
-
-Follow the tutorial [here](http://confluence.jetbrains.com/display/IntelliJIDEA/Prerequisites) to get set up
-
-# License
-
-    Copyright 2014 Red Hat Inc.
-
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
-
-        http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
+Original [README.md](https://github.com/kvakvs/intellij-yang/README.md) and
+local copy [README.md](https://github.com/cboling/yang-plugin/.original.README.md)

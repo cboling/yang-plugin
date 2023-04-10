@@ -2,7 +2,7 @@
 <idea-plugin>
     <id>com.bcsw.yang</id>
     <name>Yang Data Modeling Language</name>
-    <vendor email="chip@bcsw.net" url="">Chip Boling </vendor>
+    <vendor email="ide-plugin@bcsw.net" url="">Yang Tools </vendor>
     <!--
       The questions should go to the vendor above. The original author(s) are below:
       <vendor email="dave@dtucker.co.uk" url="http://dtucker.co.uk">Dave Tucker</vendor>
@@ -19,10 +19,10 @@
     The plugin adds syntax highlighting for Yang 1.0 and simple code completion.
     ]]></description>
 
-    <resource-bundle>messages.MyBundle</resource-bundle>
+<!--    <resource-bundle>messages.MyBundle</resource-bundle>-->
 
     <extensions defaultExtensionNs="com.intellij">
-<!--        <toolWindow factoryClass="com.bcsw.yangplugin.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>-->
+<!--        <toolWindow factoryClass="com.bcsw.yang.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>-->
         <fileType name="Yang Data Model"
                   implementationClass="com.bcsw.yang.YangFileType"
                   fieldName="INSTANCE"
@@ -45,6 +45,6 @@
     </extensions>
 
 <!--    <applicationListeners>-->
-<!--        <listener class="com.bcsw.yangplugin.listeners.MyFrameStateListener" topic="com.intellij.ide.FrameStateListener"/>-->
+<!--        <listener class="com.bcsw.yang.listeners.MyFrameStateListener" topic="com.intellij.ide.FrameStateListener"/>-->
 <!--    </applicationListeners>-->
 </idea-plugin>
